@@ -44,7 +44,8 @@ AddPostScreen(shouldEdit: true,
 
 
 ## 4.  Example:
-...
+
+``` 
 
 import 'dart:io';
 
@@ -182,4 +183,4 @@ class _CreatePostState extends State<CreatePost> {
 }
 
 
-...
+``` 
