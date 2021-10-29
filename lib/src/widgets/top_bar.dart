@@ -45,78 +45,9 @@ class AppTopBar extends StatelessWidget implements PreferredSizeWidget {
           if (onNextButtonPressed != null) {
             onNextButtonPressed();
           }
-          // Navigator.pop(context);
-          // FlutterStatusbarManager.setHidden(false);
-        },
+         },
       )
       ],);
-    Container(
-      height: height,
-      color: Theme.of(context).primaryColorDark,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          FlatButton(
-            child: Text(
-              'Cancel',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-              ),
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-              FlutterStatusbarManager.setHidden(false);
-            },
-          ),
-          // FlatButton(
-          //   child: screenName == 'gallery'
-          //       ? Row(
-          //     children: [
-          //       Text(
-          //         'Recent',
-          //         style: TextStyle(
-          //           color: Colors.white,
-          //           fontSize: 18,
-          //           fontWeight: FontWeight.bold,
-          //         ),
-          //       ),
-          //       Icon(
-          //         Ionicons.ios_arrow_down,
-          //         color: Colors.white,
-          //       )
-          //     ],
-          //   )
-          //       : Text(
-          //     screenName == 'camera' ? 'Photo' : 'Video',
-          //     style: TextStyle(fontSize: 18, color: Colors.white),
-          //   ),
-          //   onPressed: () {},
-          // ),
-          screenName == 'gallery'
-              ? FlatButton(
-            child: Text(
-              '   Next',
-              style: TextStyle(
-                color: Theme.of(context).primaryColorLight,
-                fontSize: 18,
-              ),
-            ),
-            onPressed: () {
-              if (onNextButtonPressed != null) {
-                onNextButtonPressed();
-              }
-              Navigator.pop(context);
-              FlutterStatusbarManager.setHidden(false);
-            },
-          )
-              : FlatButton(
-            child: Container(),
-            onPressed: () {},
-          ),
-        ],
-      ),
-    );
   }
 
   @override

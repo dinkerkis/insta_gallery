@@ -6,7 +6,6 @@ import 'package:insta_gallery/src/images_screen.dart';
 import 'package:insta_gallery/src/utils.dart';
 import 'package:insta_gallery/src/videos_screen.dart';
 import 'package:insta_gallery/src/widgets/bottom_bar.dart';
-import 'package:insta_gallery/src/widgets/top_bar.dart';
 import 'package:image_cropper/image_cropper.dart';
 
 class InstaGallery extends StatefulWidget {
@@ -34,9 +33,7 @@ class _InstaGalleryState extends State<InstaGallery> {
 
     _pages = [
       GalleryImageScreen(onGalleryImagePicked: (File file) {
-
         selectedVideoIndex = -1;
-
         if (widget.shouldEdit) {
           _cropImage(file);
         }
@@ -65,12 +62,6 @@ class _InstaGalleryState extends State<InstaGallery> {
         FlutterStatusbarManager.setHidden(false);
         // }
       }),
-      // AddPostCamera(onNextButtonPressed: () {
-      //
-      // },),
-      // AddPostVideo(onNextButtonPressed: () {
-      //
-      // },),
     ];
   }
 

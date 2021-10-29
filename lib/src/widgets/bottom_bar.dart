@@ -14,7 +14,6 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-  bool _isGallery = true;
   bool _isCamera = true;
   bool _isVideo = false;
 
@@ -28,24 +27,11 @@ class _BottomBarState extends State<BottomBar> {
 
     return  Container(
         color: Theme.of(context).primaryColorDark,
-        // height: widget.height,
         child: SafeArea(child: Container(
           height: widget.height,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              // FlatButton(
-              //   child: Text(
-              //     'Library',
-              //     style: _isGallery ? _selectedStyle : _unSelectedStyle,
-              //   ),
-              //   onPressed: () {
-              //     setState(() {
-              //       _setFlagTrue(buttonName: 'gallery');
-              //       widget.onTap(0);
-              //     });
-              //   },
-              // ),
               FlatButton(
                 child: Text('Photo',
                     style: _isCamera ? _selectedStyle : _unSelectedStyle),
@@ -76,16 +62,10 @@ class _BottomBarState extends State<BottomBar> {
   }
 
   void _setFlagTrue({required String buttonName}) {
-    if (buttonName == 'gallery') {
-      _isGallery = true;
-      _isCamera = false;
-      _isVideo = false;
-    } else if (buttonName == 'camera') {
-      _isGallery = false;
+    if (buttonName == 'camera') {
       _isCamera = true;
       _isVideo = false;
     } else {
-      _isGallery = false;
       _isCamera = false;
       _isVideo = true;
     }

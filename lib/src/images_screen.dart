@@ -192,21 +192,6 @@ class _GalleryImageScreenState extends State<GalleryImageScreen> {
                                 isExpanded = !isExpanded;
                               });
                             }),
-                            // Container(
-                            //   width: _screen.width / 1.6,
-                            //   child: Row(
-                            //     mainAxisAlignment:
-                            //     MainAxisAlignment.spaceEvenly,
-                            //     children: <Widget>[
-                            //       _circularStackButton(icon: Entypo.infinity),
-                            //       _circularStackButton(icon: Feather.layout),
-                            //       _circularStackButton(
-                            //           icon: MaterialCommunityIcons
-                            //               .checkbox_multiple_blank_outline,
-                            //           text: 'SELECT MULTIPLE'),
-                            //     ],
-                            //   ),
-                            // ),
                           ],
                         ),
                       ),
@@ -216,7 +201,6 @@ class _GalleryImageScreenState extends State<GalleryImageScreen> {
               ),
               Divider(height: 5,),
               Container(
-                //height: _screen.height - 90,
                 child: galleryImagesList.length == 0 ? Container(
                     padding: EdgeInsets.only(top: 50),
                     child: CircularProgressIndicator(color: Theme.of(context).primaryColorLight,)) :
