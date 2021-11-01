@@ -24,7 +24,7 @@ import 'package:insta_gallery/insta_gallery.dart';
 ## 3.  Use in the code like this: 
 
 ``` 
-AddPostScreen(shouldEdit: true,
+InstaGallery(shouldEdit: true,
                   onGalleryImagePicked: (file) {
                     if (mounted) {
                       setState(() {
@@ -151,7 +151,7 @@ class _CreatePostState extends State<CreatePost> {
         onPressed: () {
           Navigator.push(context,
             MaterialPageRoute(
-                builder: (_) => AddPostScreen(shouldEdit: true,
+                builder: (_) => InstaGallery(shouldEdit: true,
                   onGalleryImagePicked: (file) {
                     galleryImagePicked = file;
                     galleryVideoPicked = null;
