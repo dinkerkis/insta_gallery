@@ -70,6 +70,7 @@ InstaGallery(shouldEdit: true,
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:insta_gallery/insta_gallery.dart';
 import 'package:video_player/video_player.dart';
 
 class CreatePost extends StatefulWidget {
