@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_statusbar_manager/flutter_statusbar_manager.dart';
 import 'package:insta_gallery/src/images_screen.dart';
 import 'package:insta_gallery/src/utils.dart';
+import 'package:insta_gallery/src/video_editor.dart';
 import 'package:insta_gallery/src/videos_screen.dart';
 import 'package:insta_gallery/src/widgets/bottom_bar.dart';
 import 'package:image_cropper/image_cropper.dart';
@@ -50,17 +51,31 @@ class _InstaGalleryState extends State<InstaGallery> {
       GalleryVideoScreen(onGalleryVideoPicked: (File file) {
 
         selectedImageIndex = -1;
-        // if (widget.shouldEdit) {
-        //   _cropImage(file, isImage: false);
-        // }
-        // else {
+        if (widget.shouldEdit) {
+          //_cropImage(file, isImage: false);
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) =>
+                  VideoEditor(file: File(file.path),
+                    onGalleryVideoPicked: (file) {
+                      if (widget.onGalleryVideoPicked != null) {
+                        widget.onGalleryVideoPicked!(file);
+                      }
+                      Navigator.pop(context);
+                      Navigator.pop(context);
+                      FlutterStatusbarManager.setHidden(false);
+                    },), //TrimmerView( file),
+            ),
+          );
+        }
+        else {
         if (widget.onGalleryVideoPicked != null) {
           widget.onGalleryVideoPicked!(file);
         }
 
         Navigator.pop(context);
         FlutterStatusbarManager.setHidden(false);
-        // }
+        }
       }),
     ];
   }

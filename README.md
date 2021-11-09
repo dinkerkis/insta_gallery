@@ -4,6 +4,10 @@ A new Flutter project.
 
 ## Getting Started
 
+## iOS Target
+
+This package will work for iOS 13 or later versions.
+
 ## iOS plist config 
 
 Because the album is a privacy privilege, you need user permission to access it. You must to modify the Info.plist file in Runner project.
