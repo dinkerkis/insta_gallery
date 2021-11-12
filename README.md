@@ -2,6 +2,9 @@
 
 A new Flutter project.
 
+## Screenshot
+https://paste.pics/5f7f467e6aae3b58e71bbb2b61c902da
+
 ## Getting Started
 
 ## iOS Target
