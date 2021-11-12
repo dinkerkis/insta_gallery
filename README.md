@@ -3,7 +3,7 @@
 A new Flutter project.
 
 ## Screenshot
-![Simulator Screen Shot - iPhone 12 Pro Max - 2021-11-12 at 10 06 23](https://user-images.githubusercontent.com/82141553/141453574-386b779d-6a9d-4ae8-ad1f-e01355d2dab1.png)
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-11-12 at 10 06 23](https://user-images.githubusercontent.com/82141553/141453574-386b779d-6a9d-4ae8-ad1f-e01355d2dab1.png?size=40*40)
 
 ## Getting Started
 
