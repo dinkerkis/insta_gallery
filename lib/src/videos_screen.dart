@@ -157,7 +157,7 @@ class _GalleryVideoScreenState extends State<GalleryVideoScreen> {
       body: Container(
         height: _screen.height,
         width: _screen.width,
-        color: primaryColor,
+        // color: primaryColor,
         child: SingleChildScrollView(
           controller: _singleChildController,
           child: Column(
@@ -171,7 +171,7 @@ class _GalleryVideoScreenState extends State<GalleryVideoScreen> {
                 },),
               Container(
                 height: 410,
-                color: secondaryColor,
+                // color: secondaryColor,
                 child: Stack(
                   children: <Widget>[
                     Center(

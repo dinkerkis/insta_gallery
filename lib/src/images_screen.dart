@@ -159,7 +159,7 @@ class _GalleryImageScreenState extends State<GalleryImageScreen> {
       body: Container(
         height: _screen.height,
         width: _screen.width,
-        color: primaryColor,
+        //color: primaryColor,
         child: SingleChildScrollView(
           controller: _singleChildController,
           child: Column(
@@ -173,7 +173,7 @@ class _GalleryImageScreenState extends State<GalleryImageScreen> {
                 },),
               Container(
                 height: 410,
-                color: secondaryColor,
+                // color: secondaryColor,
                 child: Stack(
                   children: <Widget>[
                     selectedIndex >= 0 ? Container(
