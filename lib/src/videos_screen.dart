@@ -2,6 +2,7 @@
 import 'dart:io';
 import 'dart:typed_data';
 
+import 'package:cropper_and_trimmer/cropper_and_trimmer.dart';
 import 'package:flutter/material.dart';
 import 'package:insta_gallery/src/add_screen.dart';
 import 'package:insta_gallery/src/utils.dart';
@@ -152,10 +153,11 @@ class _GalleryVideoScreenState extends State<GalleryVideoScreen> {
     Size _screen = MediaQuery.of(context).size;
 
     return Scaffold(
+      backgroundColor: backgroundColor,
       body: Container(
         height: _screen.height,
         width: _screen.width,
-        color: Theme.of(context).primaryColorDark,
+        color: primaryColor,
         child: SingleChildScrollView(
           controller: _singleChildController,
           child: Column(
@@ -169,7 +171,7 @@ class _GalleryVideoScreenState extends State<GalleryVideoScreen> {
                 },),
               Container(
                 height: 410,
-                color: Theme.of(context).primaryColorLight,
+                color: secondaryColor,
                 child: Stack(
                   children: <Widget>[
                     Center(
@@ -183,6 +185,7 @@ class _GalleryVideoScreenState extends State<GalleryVideoScreen> {
                     Center(
                       child: _controller.value.isInitialized
                           ? FloatingActionButton(
+                        backgroundColor: primaryColor,
                         onPressed: () {
                           setState(() {
                             _controller.value.isPlaying
@@ -191,7 +194,7 @@ class _GalleryVideoScreenState extends State<GalleryVideoScreen> {
                           });
                         },
                         child: Icon(
-                          _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+                          _controller.value.isPlaying ? Icons.pause : Icons.play_arrow, color: secondaryColor,
                         ),
                       ) : Container(),
                     ),
@@ -204,7 +207,7 @@ class _GalleryVideoScreenState extends State<GalleryVideoScreen> {
                 child: galleryVideosList.length == 0 ? Container(
                     padding: EdgeInsets.only(top: 50),
                     child: CircularProgressIndicator(
-                      color: Theme.of(context).primaryColorLight,)) :
+                      color: secondaryColor,)) :
                 GridView.count(
                     padding: EdgeInsets.only(bottom: 40),
                     controller: _gridScrollController,
@@ -240,7 +243,7 @@ class _GalleryVideoScreenState extends State<GalleryVideoScreen> {
                                   galleryVideosEntityList[index].duration.toString() + ' sec' : '',
                                       maxLines: 1,
                                       style: TextStyle(
-                                        color: Theme.of(context).primaryColorLight,
+                                        color: secondaryColor,
                                         fontSize: 18, fontWeight: FontWeight.w600,
                                       )
                                   )

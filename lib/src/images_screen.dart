@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:cropper_and_trimmer/cropper_and_trimmer.dart';
 import 'package:flutter/material.dart';
 import 'package:insta_gallery/src/add_screen.dart';
 import 'package:insta_gallery/src/utils.dart';
@@ -154,10 +155,11 @@ class _GalleryImageScreenState extends State<GalleryImageScreen> {
     Size _screen = MediaQuery.of(context).size;
 
     return Scaffold(
+      backgroundColor: backgroundColor,
       body: Container(
         height: _screen.height,
         width: _screen.width,
-        color: Theme.of(context).primaryColorDark,
+        color: primaryColor,
         child: SingleChildScrollView(
           controller: _singleChildController,
           child: Column(
@@ -171,7 +173,7 @@ class _GalleryImageScreenState extends State<GalleryImageScreen> {
                 },),
               Container(
                 height: 410,
-                color: Theme.of(context).primaryColorLight,
+                color: secondaryColor,
                 child: Stack(
                   children: <Widget>[
                     selectedIndex >= 0 ? Container(
@@ -203,7 +205,7 @@ class _GalleryImageScreenState extends State<GalleryImageScreen> {
               Container(
                 child: galleryImagesList.length == 0 ? Container(
                     padding: EdgeInsets.only(top: 50),
-                    child: CircularProgressIndicator(color: Theme.of(context).primaryColorLight,)) :
+                    child: CircularProgressIndicator(color: secondaryColor,)) :
                 GridView.count(
                     padding: EdgeInsets.only(bottom: 40),
                     controller: _gridScrollController,

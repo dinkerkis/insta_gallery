@@ -11,13 +11,13 @@ dependencies:
   flutter:
     sdk: flutter
   photo_manager: any
-  image_cropper: any
-  video_player: any
   flutter_statusbar_manager: any
   permission_handler: ^6.0.1
-  video_editor: any
-  image_picker: any
   helpers: any
+  cropper_and_trimmer:
+    git:
+      url: https://github.com/dinkerkis/cropper_and_trimmer.git
+
 
 dev_dependencies:
   flutter_test:

@@ -43,6 +43,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.15.0"
+  cropper_and_trimmer:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "4024b0c852aa972e7b93dd7499bc64dc40b1b18b"
+      url: "https://github.com/dinkerkis/cropper_and_trimmer.git"
+    source: git
+    version: "0.0.1"
   cross_file:
     dependency: transitive
     description:
@@ -128,6 +137,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  gallery_saver:
+    dependency: transitive
+    description:
+      name: gallery_saver
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.3.2"
   helpers:
     dependency: "direct main"
     description:
@@ -157,14 +173,14 @@ packages:
     source: hosted
     version: "4.0.0"
   image_cropper:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: image_cropper
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.4.1"
   image_picker:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: image_picker
       url: "https://pub.dartlang.org"
@@ -358,14 +374,14 @@ packages:
     source: hosted
     version: "2.1.0"
   video_editor:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: video_editor
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.2"
   video_player:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: video_player
       url: "https://pub.dartlang.org"

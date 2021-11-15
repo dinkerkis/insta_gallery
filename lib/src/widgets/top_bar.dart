@@ -1,3 +1,4 @@
+import 'package:cropper_and_trimmer/cropper_and_trimmer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_statusbar_manager/flutter_statusbar_manager.dart';
 
@@ -18,13 +19,13 @@ class AppTopBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Theme.of(context).primaryColorDark,
+      backgroundColor: primaryColor,
       leadingWidth: 100,
       leading: FlatButton(
         child: Text(
           'Cancel',
           style: TextStyle(
-            color: Theme.of(context).primaryColorLight,
+            color: secondaryColor,
             fontSize: 18,
           ),
         ),
@@ -37,7 +38,7 @@ class AppTopBar extends StatelessWidget implements PreferredSizeWidget {
         child: Text(
           'Next',
           style: TextStyle(
-            color: Theme.of(context).primaryColorLight,
+            color: secondaryColor,
             fontSize: 18,
           ),
         ),

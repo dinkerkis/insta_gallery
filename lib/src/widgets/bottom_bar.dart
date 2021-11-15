@@ -1,3 +1,4 @@
+import 'package:cropper_and_trimmer/cropper_and_trimmer.dart';
 import 'package:flutter/material.dart';
 
 class BottomBar extends StatefulWidget {
@@ -22,11 +23,11 @@ class _BottomBarState extends State<BottomBar> {
 
   @override
   Widget build(BuildContext context) {
-    _selectedStyle = TextStyle(fontWeight: FontWeight.bold, color: Theme.of(context).primaryColorLight, fontSize: 20);
-    _unSelectedStyle = TextStyle(fontWeight: FontWeight.normal, color: Theme.of(context).primaryColorLight, fontSize: 18);
+    _selectedStyle = TextStyle(fontWeight: FontWeight.bold, color: secondaryColor, fontSize: 20);
+    _unSelectedStyle = TextStyle(fontWeight: FontWeight.normal, color: secondaryColor, fontSize: 18);
 
     return  Container(
-        color: Theme.of(context).primaryColorDark,
+        color: primaryColor,
         child: SafeArea(child: Container(
           height: widget.height,
           child: Row(
