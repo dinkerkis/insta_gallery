@@ -146,7 +146,7 @@ class _InstaGalleryState extends State<InstaGallery> {
   Widget build(BuildContext context) {
 
 
-    backgroundColor = widget.backgroundColor ?? Colors.white;
+    backgroundColor = widget.backgroundColor ?? Theme.of(context).primaryColorDark;
     primaryColor = widget.primaryColor ?? Theme.of(context).primaryColorDark;
     secondaryColor = widget.secondaryColor ?? Theme.of(context).primaryColorLight;
 
